@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  background: #333;
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.indicator-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 45%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #fff;
+  margin: 5px;
+  transition: 0.8s all ease-in-out;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.children-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide {
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-shrink: 0;
+  background-position: center;
+  background-size: cover;
+  transition: 0.8s all ease-in-out;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.arrows {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  width: 100vw;
+}
+.arrows i:first-child {
+  position: absolute;
+  left: 2%;
+}
+.arrows i:last-child {
+  position: absolute;
+  right: 2%;
+}
+.arrows i {
+  font-size: 36px;
+  color: #fff;
+}
+
+.arrows i:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+  .indicator-wrapper {
+    left: 40%;
+  }
+  .center h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .center p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
